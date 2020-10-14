@@ -1,0 +1,32 @@
+[
+    {
+        "username": "c",
+        "name": "d",
+        "role": "d",
+        "password": "4a7d1ed414474e4033ac29ccb8653d9b"
+    },
+    {
+        "username": "daniel",
+        "name": "Daniel Estrada",
+        "role": "Admin",
+        "password": "bb7946e7d85c81a9e69fee1cea4a087c"
+    },
+    {
+        "username": "danie1estrada",
+        "name": "Daniel Estrada",
+        "role": "Admin",
+        "password": "56fb167809cddf32a68168c0511c654d"
+    },
+    {
+        "username": "nuevo",
+        "name": "Nuevo",
+        "role": "Usuario",
+        "password": "eb62f6b9306db575c2d596b1279627a4"
+    },
+    {
+        "username": "d",
+        "name": "d",
+        "role": "d",
+        "password": "81dc9bdb52d04dc20036dbd8313ed055"
+    }
+]
