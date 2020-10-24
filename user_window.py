@@ -19,9 +19,13 @@ class UserWindow:
         self.__build()
 
     def __build(self):
-        self.builder.get_object('entry_username').set_text(self.user.username)
         self.builder.get_object('entry_name').set_text(self.user.name)
         self.builder.get_object('entry_role').set_text(self.user.role)
+
+        entry_username = self.builder.get_object('entry_username')
+        entry_username.set_text(self.user.username)
+        if self.is_editing_mode:
+            entry_username.set_sensitive(False)
 
     def run(self):
         self.window.show()
@@ -62,7 +66,7 @@ class UserWindow:
                 self.controller.update(self.user)
             else:
                 self.controller.create(self.user)
-            Gtk.main_quit()
+            self.window.destroy()
         except Exception as e:
             self.show_dialog('Ha ocurrido un error', str(e), Gtk.MessageType.ERROR)
 

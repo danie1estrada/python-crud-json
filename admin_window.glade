@@ -36,7 +36,7 @@
         <property name="row_spacing">16</property>
         <property name="column_spacing">16</property>
         <child>
-          <object class="GtkButton">
+          <object class="GtkButton" id="button_add_user">
             <property name="label" translatable="yes">Agregar usuario</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
@@ -113,9 +113,10 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton">
+          <object class="GtkButton" id="button_edit_user">
             <property name="label" translatable="yes">Editar</property>
             <property name="visible">True</property>
+            <property name="sensitive">False</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
             <signal name="clicked" handler="on_edit_user" swapped="no"/>
@@ -126,11 +127,13 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton">
+          <object class="GtkButton" id="button_delete_user">
             <property name="label" translatable="yes">Eliminar</property>
             <property name="visible">True</property>
+            <property name="sensitive">False</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_delete_user" swapped="no"/>
           </object>
           <packing>
             <property name="left_attach">2</property>

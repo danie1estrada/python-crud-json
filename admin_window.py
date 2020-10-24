@@ -32,29 +32,43 @@ class AdminWindow:
         self.__update()
 
     def on_edit_user(self, widget):
-        UserWindow(self.controller.find(self.selected_user)).run()
+        user = self.controller.find(self.selected_user)
+        UserWindow(user).run()
         self.__update()
 
     def on_delete_user(self, widget):
-        dialog = Gtk.Dialog(
-            'Confirmar eliminar usuario',
-            self.window,
-            flags=1,
+        dialog = Gtk.MessageDialog(
+            transient_for=self.window,
+            flags=0,
             message_type=Gtk.MessageType.WARNING,
-            buttons=(Gtk.ButtonsType.OK, Gtk.ButtonsType.CANCEL),
-            text='Error de inicio de sesión'
+            buttons=Gtk.ButtonsType.YES_NO,
+            text='¿Desea eliminar este usuario?'
         )
+        result = dialog.run()
+        dialog.destroy()
+        if result == -8:
+            user = self.controller.find(self.selected_user)
+            self.controller.delete(user)
+            self.__update()
 
     def on_cursor_changed(self, widget):
-        model, tree_iter = widget.get_selection().get_selected()
-        self.selected_user = model.get_value(tree_iter, 0)
+        if self.selected_user == '':
+            self.builder.get_object('button_edit_user').set_sensitive(True)
+            self.builder.get_object('button_delete_user').set_sensitive(True)
+
+        try:
+            model, tree_iter = widget.get_selection().get_selected()
+            self.selected_user = model.get_value(tree_iter, 0)
+        except:
+            self.selected_user = ''
+            self.builder.get_object('button_edit_user').set_sensitive(False)
+            self.builder.get_object('button_delete_user').set_sensitive(False)
 
     def on_destroy(self, *args):
         Gtk.main_quit()
         
     def main(self):
         Gtk.main()
-
 
 
 if __name__ == "__main__":

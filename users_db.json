@@ -1,13 +1,7 @@
 [
     {
-        "username": "c",
-        "name": "d",
-        "role": "d",
-        "password": "4a7d1ed414474e4033ac29ccb8653d9b"
-    },
-    {
         "username": "daniel",
-        "name": "Daniel Estrada",
+        "name": "Juan Daniel Estrada Romero",
         "role": "Admin",
         "password": "bb7946e7d85c81a9e69fee1cea4a087c"
     },
@@ -16,36 +10,6 @@
         "name": "Daniel Estrada",
         "role": "Admin",
         "password": "56fb167809cddf32a68168c0511c654d"
-    },
-    {
-        "username": "nuevo",
-        "name": "Nuevo",
-        "role": "Usuario",
-        "password": "eb62f6b9306db575c2d596b1279627a4"
-    },
-    {
-        "username": "d",
-        "name": "d",
-        "role": "d",
-        "password": "81dc9bdb52d04dc20036dbd8313ed055"
-    },
-    {
-        "username": "jessicaramsa",
-        "name": "Jessica Ramirez",
-        "role": "Admin",
-        "password": "81dc9bdb52d04dc20036dbd8313ed055"
-    },
-    {
-        "username": "asd",
-        "name": "asd",
-        "role": "asd",
-        "password": "7815696ecbf1c96e6894b779456d330e"
-    },
-    {
-        "username": "nuevo_usuario",
-        "name": "Nuevo Usuario",
-        "role": "Usuario",
-        "password": "ec6a6536ca304edf844d1d248a4f08dc"
     },
     {
         "username": "batman",

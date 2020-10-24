@@ -7,8 +7,8 @@ class UserController:
     def __init__(self):
         self.file_name = 'users_db.json'
     
-    def find(self, username):
-        filtered = [user for user in self.get_users() if user.username == username]
+    def find(self, username, users=None):
+        filtered = [user for user in users or self.get_users() if user.username == username]
         return filtered.pop() if filtered else None
 
     def get_users(self):
@@ -27,14 +27,15 @@ class UserController:
 
     def update(self, user):
         users = self.get_users()
-        users[users.index(self.find(user.username))] = user
+        users[users.index(self.find(user.username, users))] = user
 
         with open(self.file_name, 'w', encoding='utf-8') as db:
             json.dump(list(map(lambda user: user.to_dict(), users)), db, indent=4)
 
     def delete(self, user):
         users = self.get_users()
-        users.remove(self.find(user.username))
+        user_to_delete = self.find(user.username, users)
+        users.remove(user_to_delete)
 
         with open(self.file_name, 'w', encoding='utf-8') as db:
             json.dump(list(map(lambda user: user.to_dict(), users)), db, indent=4)
