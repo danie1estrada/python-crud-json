@@ -1,4 +1,5 @@
 from user_controller import UserController
+from login_window import LoginWindow
 from user import User
 
 def menu():
@@ -57,4 +58,5 @@ def password_input(controller):
         password = input('Ingrese una contraseña válida: ')
 
 if __name__ == '__main__':
-    menu()
+    # menu()
+    LoginWindow().main()

@@ -28,5 +28,41 @@
         "name": "d",
         "role": "d",
         "password": "81dc9bdb52d04dc20036dbd8313ed055"
+    },
+    {
+        "username": "jessicaramsa",
+        "name": "Jessica Ramirez",
+        "role": "Admin",
+        "password": "81dc9bdb52d04dc20036dbd8313ed055"
+    },
+    {
+        "username": "asd",
+        "name": "asd",
+        "role": "asd",
+        "password": "7815696ecbf1c96e6894b779456d330e"
+    },
+    {
+        "username": "nuevo_usuario",
+        "name": "Nuevo Usuario",
+        "role": "Usuario",
+        "password": "ec6a6536ca304edf844d1d248a4f08dc"
+    },
+    {
+        "username": "batman",
+        "name": "Bruce Wayne",
+        "role": "Owner",
+        "password": "d1ebaaac13d8a73b0cbf1b8e99c329dd"
+    },
+    {
+        "username": "ironman",
+        "name": "Tony Stark",
+        "role": "Admin",
+        "password": "0d94d92e3dc096f64213a5b34fa9d098"
+    },
+    {
+        "username": "spiderman",
+        "name": "Peter Parker",
+        "role": "User",
+        "password": "7b81a7a76693d0321b9498e12e4f4759"
     }
 ]
